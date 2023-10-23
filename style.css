@@ -1,0 +1,20 @@
+ul{
+    list-style: none;
+    display: flex;
+    gap:1rem;
+    background-color: lightgray;
+}
+
+ul li:hover{
+    transform: scale(1.5);
+}
+
+ul li[data-selected=true]{
+    background-color: grey;
+}
+
+.disabled{
+    display: none;
+}
+
+.tab2{}

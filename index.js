@@ -1,23 +1,15 @@
-const tabs=document.querySelectorAll(".tabs-li")
-console.log(tabs)
+const tabElements=document.querySelectorAll("[data-tab-target]")
+const tabContentElements=document.querySelectorAll("[data-tab-content]")
 
-const tab1Content=document.querySelector(".tab1")
-const tab2Content=document.querySelector(".tab2")
-
-tabs[0].addEventListener("click",()=>{
-    tabs[0].setAttribute("data-selected",true)
-    tabs[1].setAttribute("data-selected",false)
-    tab2Content.classList.add("disabled")
-    tab1Content.classList.remove("disabled")
-
+tabElements.forEach(tab=>{
+    tab.addEventListener('click',()=>{
+        const selectedTab=document.querySelector(tab.dataset.tabTarget);
+        tab.classList.
+        tabContentElements.forEach(tabContent=>{
+            tabContent.classList.remove('active')
+        })
+        selectedTab.classList.add('active');
+    })
 })
 
-
-tabs[1].addEventListener("click",()=>{
-    tabs[1].setAttribute("data-selected",true)
-    tabs[0].setAttribute("data-selected",false)
-    tab1Content.classList.add("disabled")
-    tab2Content.classList.remove("disabled")
-
-    
-})
+console.log(tabElements)

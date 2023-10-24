@@ -13,8 +13,10 @@ ul li[data-selected=true]{
     background-color: grey;
 }
 
-.disabled{
+[data-tab-content]{
     display: none;
 }
 
-.tab2{}
+.active[data-tab-content]{
+    display: block;
+}

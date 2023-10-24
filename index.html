@@ -9,12 +9,12 @@
 <body>
     <h6>tabs</h6>
         <ul class="tabs">
-            <li class="tabs-li one" data-selected="true">Tab 1</li>
-            <li class="tabs-li two" data-selected="false">Tab 2</li>
+            <li data-tab-target="#tab1">Tab 1</li>
+            <li data-tab-target="#tab2">Tab 2</li>
         </ul>
     <div class="tab-content">
-        <div class="tab1">Tab1</div>
-        <div class="tab2">Tab2</div>
+        <div id="tab1" data-tab-content>Tab1</div>
+        <div id="tab2" data-tab-content>Tab2</div>
     </div>
     <script src="index.js"></script>
 </body>
